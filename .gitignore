@@ -1,32 +1,35 @@
-# Node modules
+# Node dependencies
 /node_modules/
 
-# Logs
-logs
+# Log files
+logs/
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Environment variables
+# Environment files
 .env
 .env.local
 .env.*.local
 
-# Build outputs
+# Build output
 /build/
 .svelte-kit/
+dist/
 
-# VSCode settings
+# TypeScript cache
+*.tsbuildinfo
+
+# Test coverage
+coverage/
+*.lcov
+
+# Editor settings
 .vscode/
+.idea/
+*.swp
 
-# OS files
+# System files
 .DS_Store
 Thumbs.db
-
-# Optional: lock files
-package-lock.json
-yarn.lock
-
-# TypeScript build cache
-*.tsbuildinfo
