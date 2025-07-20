@@ -1,1 +1,30 @@
 @import "tailwindcss";
+@tailwind utilities;
+
+:root {
+  --color-accent-success: #11BF7F;
+  --color-accent-error: #F2055C;
+  --color-accent-info: #2E2D59;
+  --color-primary-dark: #3a0686; /*base */
+
+  --glass-bg: rgba(255, 255, 255, 0.05);
+}
+
+@layer utilities {
+  .glass {
+    backdrop-filter: blur(12px);
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+
+  .gradient-bg-error {
+    background-image: linear-gradient(to right, var(--color-accent-error), var(--color-primary-dark));
+  }
+
+  .gradient-bg-success {
+    background-image: linear-gradient(to right, var(--color-accent-success), var(--color-primary-dark));
+  }
+
+  .gradient-bg-info {
+    background-image: linear-gradient(to right, var(--color-accent-info), var(--color-primary-dark));
+  }
+}
