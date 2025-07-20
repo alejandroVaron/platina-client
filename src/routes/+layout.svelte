@@ -1,5 +1,10 @@
 <script>
-  import '../app.css'; // Import to add TailWind to entire platform
+    import "../app.css"
+    import Toaster from '$lib/components/Toaster.svelte';
+
+    let { children } = $props();
 </script>
 
-<slot />
+<Toaster />
+
+{@render children()}

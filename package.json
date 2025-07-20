@@ -14,16 +14,17 @@
     "format": "prettier --write './src/**/*.{js,ts,svelte,json,css,scss,md}'",
     "test": "vitest run",
     "test:watch": "vitest",
-    "clean": "rimraf .svelte-kit build node_modules/.vite"
+    "clean": "rimraf .svelte-kit build node_modules/.vite",
+    "dev:prod": "cross-env NODE_ENV=production vite dev"
   },
   "devDependencies": {
-    "@skeletonlabs/skeleton": "^3.1.4",
+    "@melt-ui/pp": "^0.3.2",
     "@sveltejs/adapter-auto": "^6.0.1",
     "@sveltejs/kit": "^2.21.0",
     "@sveltejs/vite-plugin-svelte": "^6.0.0",
-    "@tailwindcss/postcss": "^4.1.11",
+    "@types/node": "^24.0.15",
     "autoprefixer": "^10.4.21",
-    "postcss": "^8.5.6",
+    "cross-env": "^7.0.3",
     "svelte": "^5.0.0",
     "svelte-check": "^4.0.0",
     "tailwindcss": "^4.1.11",
@@ -32,5 +33,13 @@
   },
   "overrides": {
     "cookie": "^0.7.0"
+  },
+  "dependencies": {
+    "@melt-ui/svelte": "^0.86.6",
+    "@tailwindcss/vite": "^4.1.11",
+    "clsx": "^2.1.1",
+    "dotenv-flow": "^4.1.0",
+    "lucide-svelte": "^0.525.0",
+    "melt": "^0.38.0"
   }
 }
