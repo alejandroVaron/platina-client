@@ -25,7 +25,7 @@
 
 <div
   {...toaster.root}
-  class="fixed bottom-6 right-6 z-50 flex flex-col w-screen bg-transparent overflow-hidden"
+  class="fixed ml-auto mt-auto z-50 flex w-96 flex-col  bg-transparent overflow-hidden"
 >
   {#each toaster.toasts as toast, i (toast.id)}
     <div
@@ -48,13 +48,13 @@
           <div class="flex-1">
             <h3
               {...toast.title}
-              class="text-base text-gray-900 dark:text-white font-extrabold"
+              class="text-base text-white font-extrabold"
             >
               {toast.data.title}
             </h3>
             <div
               {...toast.description}
-              class="text-xs text-gray-700 dark:text-gray-200 font-semibold"
+              class="text-xs text-white font-semibold"
             >
               {toast.data.description}
             </div>
@@ -78,14 +78,14 @@
   .toast {
     position: relative;
     display: flex;
-    width: 25%;
+    width: 90%;
     flex-direction: column;
     justify-content: center;
     gap: 0.25rem;
     border-radius: 0.5rem;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     transition: all 0.2s ease;
-    color: black;
+    color: var(--color-primary-black);
     text-align: left;
     transform: translateZ(0);
   }
