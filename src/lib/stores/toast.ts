@@ -8,7 +8,7 @@ export type ToastData = {
 };
 
 export const toaster = new Toaster<ToastData>({
-  closeDelay: 3000
+  closeDelay: 2000,
 });
 
 export const addToast = toaster.addToast;
